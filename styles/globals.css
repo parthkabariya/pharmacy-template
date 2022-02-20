@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "~@fortawesome/fontawesome-free/css/brands";
+@import "~@fortawesome/fontawesome-free/css/regular";
+@import "~@fortawesome/fontawesome-free/css/solid";
+@import "~@fortawesome/fontawesome-free/css/fontawesome";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+  font-family: Roboto, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.h-30-rem {
+  height: 30rem;
+}
+.hero-wrapper {
+  clear: both;
+  position: relative;
+  width: 100%;
+  color: white;
+}
+
+.hero {
+  background-image: url(/images/banner_new.png);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-content {
+  height: 600px;
+}
+
+
+.hero-content:before {
+  content: " ";
+  display: block;
+  height: 40%;
+}
+
+.hero-content h1,
+.hero-content p {
+  margin-top: 0px;
+  margin-bottom: 6px;
+}
+
+.parallax-wrapper {
+  /* // height : 100px;
+  // .parallax { */
+  /* The image used */
+  background-image: url(/images/banner2.jpg);
+
+  /* Full height */
+  height: 1000px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  /* // background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* // } */
+}
+
+.posts-page {
+  /* // .from-label{
+  //     width: 300px;
+  // } */
+  /* .post-from-ul {
+      width: 261px;
+  } */
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: #edf2f7;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0ea5e9;
+  border-radius: 100vh;
+  border: 3px solid #edf2f7;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0284c7;
+}
+
+.custom-tooltip-wrapper {
+  top: -8.2rem;
+  /* right: -17.8rem; */
+  right: -10.8rem;
+  /* svg {
+      --tw-translate-x: 7.75rem;
+    } */
+}
+
+.size-25 {
+  font-size: 25px;
+}
+.size-20 {
+  font-size: 20px;
+}
+
+ul.services-ul-list ::before {
+  content: "\f192";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 10px;
+  color: #60a5fa;
+  width: 2em;
+  position: absolute;
+  margin-left: -20px;
+}
+
+.map {
+  width: 1000px;
+  height: 450px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background-image: url(/storage/images/mobile_banner.png);
+  }
+  .parallax-wrapper {
+    height: 1500px;
+  }
+  .map {
+    width: 350px;
+    height: auto;
+  }
+}
